@@ -17,6 +17,43 @@ Play the game at: [Your GitHub Pages URL will appear here after deployment]
 
 No installation required! This project uses React via CDN, so you can simply open `index.html` in your browser.
 
+## 🏃 Running Locally
+
+You have several options to run the game locally:
+
+### Option 1: Simple Python Server (Recommended)
+```bash
+# Make the script executable (first time only)
+chmod +x start.sh
+
+# Run the server
+./start.sh
+```
+The game will automatically open in your browser at `http://localhost:8000`
+
+### Option 2: Node.js Server
+```bash
+# Run with Node.js
+node start.js
+```
+Then open `http://localhost:8000` in your browser.
+
+### Option 3: Python Manual
+```bash
+# Python 3
+python3 -m http.server 8000
+
+# Or Python 2
+python -m SimpleHTTPServer 8000
+```
+
+### Option 4: Just Open the File
+Since the project uses CDN links, you can also simply:
+- Double-click `index.html` to open it in your default browser
+- Or right-click → "Open with" → choose your browser
+
+**Note**: Using a local server (Options 1-3) is recommended to avoid potential CORS issues.
+
 ## 🚢 Deployment to GitHub Pages
 
 1. **Create a GitHub repository** (if you haven't already):
