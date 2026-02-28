@@ -18,7 +18,7 @@ A React + JSX browser game where you dodge falling rocks. Use arrow keys or A/D 
 
 ## 🚀 Live Demo
 
-Play the game at: [Your GitHub Pages URL will appear here after deployment]
+**Play the game:** https://katiehart12.github.io/dodge-rocks/
 
 ## 🏃 Running Locally (Vite + React)
 
@@ -44,28 +44,20 @@ Output goes to the `dist/` folder.
 
 ## 🚢 Deployment to GitHub Pages
 
-1. **Create a GitHub repository** (if you haven't already):
-   - Go to [GitHub](https://github.com) and create a new repository
-   - Name it something like `dodge-rocks-game` or `vibe-class`
+The workflow builds the app and pushes it to the `gh-pages` branch. You then tell GitHub to serve that branch.
 
-2. **Commit and push your code** (repo already has git; add the new Vite/JSX game):
-   ```bash
-   git add .
-   git commit -m "Add Vite + React JSX game (npm start, App.jsx, components)"
-   git push origin main
-   ```
-   If the repo is new and has no remote yet:
-   ```bash
-   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-   git push -u origin main
-   ```
+**One-time setup:**
 
-3. **Enable GitHub Pages**:
-   - Go to your repository on GitHub
-   - Click **Settings** → **Pages**
-   - Under **Source**, select `main` branch
-   - Click **Save**
-   - Your site will be available at: `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`
+1. **Push the latest code** (including this workflow) so the “Deploy to GitHub Pages” workflow runs and creates the `gh-pages` branch:
+   ```bash
+   git add . && git commit -m "Deploy to gh-pages branch" && git push origin main
+   ```
+2. On GitHub: repo → **Settings** → **Pages**.
+3. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+4. Choose **Branch:** `gh-pages`, **Folder:** `/ (root)`. Click **Save**.
+5. Wait a minute; your site will be at **https://katiehart12.github.io/dodge-rocks/**
+
+After that, every push to `main` will rebuild and update the live site.
 
 ## 🛠️ Technologies
 
