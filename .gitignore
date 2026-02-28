@@ -17,3 +17,7 @@ npm-debug.log*
 
 # Optional eslint cache
 .eslintcache
+
+# Dependencies and build
+node_modules/
+dist/

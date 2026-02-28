@@ -1,58 +1,46 @@
 # Dodge Falling Rocks Game
 
-A React-based browser game where you dodge falling rocks. Use arrow keys or A/D to move left and right.
+A React + JSX browser game where you dodge falling rocks. Use arrow keys or A/D to move left and right. Score = seconds survived.
+
+## ✔ Checklist (Local JSX Game)
+
+- ✔ **Project runs locally**: `npm start` or `npm run dev`
+- ✔ **Visible interaction**: movement (←/→ or A/D), score (seconds), win/lose (game over + restart)
+- ✔ **JSX files**: `src/App.jsx`, `src/main.jsx`, `src/components/DodgeRocksGame.jsx`
+- ✔ **Git**: Code is in a Git repo (commit and push to GitHub when ready)
 
 ## 🎮 How to Play
 
 - **Move Left**: `←` Arrow or `A` key
 - **Move Right**: `→` Arrow or `D` key
-- **Goal**: Avoid the falling rocks for as long as possible
-- **Game Over**: One hit ends your run
+- **Goal**: Avoid the falling rocks for as long as possible. Score = seconds survived.
+- **Game Over**: One hit ends your run; click **Play again** or **Restart run** to retry.
 
 ## 🚀 Live Demo
 
 Play the game at: [Your GitHub Pages URL will appear here after deployment]
 
-## 📦 Setup
+## 🏃 Running Locally (Vite + React)
 
-No installation required! This project uses React via CDN, so you can simply open `index.html` in your browser.
-
-## 🏃 Running Locally
-
-You have several options to run the game locally:
-
-### Option 1: Simple Python Server (Recommended)
 ```bash
-# Make the script executable (first time only)
-chmod +x start.sh
+# Install dependencies (first time only)
+npm install
 
-# Run the server
-./start.sh
-```
-The game will automatically open in your browser at `http://localhost:8000`
-
-### Option 2: Node.js Server
-```bash
-# Run with Node.js
-node start.js
-```
-Then open `http://localhost:8000` in your browser.
-
-### Option 3: Python Manual
-```bash
-# Python 3
-python3 -m http.server 8000
-
-# Or Python 2
-python -m SimpleHTTPServer 8000
+# Start the dev server
+npm start
+# or
+npm run dev
 ```
 
-### Option 4: Just Open the File
-Since the project uses CDN links, you can also simply:
-- Double-click `index.html` to open it in your default browser
-- Or right-click → "Open with" → choose your browser
+Then open **http://localhost:5173** in your browser.
 
-**Note**: Using a local server (Options 1-3) is recommended to avoid potential CORS issues.
+### Build for production
+
+```bash
+npm run build
+```
+
+Output goes to the `dist/` folder.
 
 ## 🚢 Deployment to GitHub Pages
 
@@ -60,12 +48,14 @@ Since the project uses CDN links, you can also simply:
    - Go to [GitHub](https://github.com) and create a new repository
    - Name it something like `dodge-rocks-game` or `vibe-class`
 
-2. **Initialize git and push your code**:
+2. **Commit and push your code** (repo already has git; add the new Vite/JSX game):
    ```bash
-   git init
    git add .
-   git commit -m "Initial commit: Dodge Rocks game"
-   git branch -M main
+   git commit -m "Add Vite + React JSX game (npm start, App.jsx, components)"
+   git push origin main
+   ```
+   If the repo is new and has no remote yet:
+   ```bash
    git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
    git push -u origin main
    ```
@@ -79,10 +69,9 @@ Since the project uses CDN links, you can also simply:
 
 ## 🛠️ Technologies
 
-- React 18 (via CDN)
+- **Vite** + **React 18** (JSX)
 - HTML5 Canvas
-- Vanilla JavaScript
-- Babel Standalone (for JSX transformation)
+- `src/App.jsx`, `src/components/DodgeRocksGame.jsx`
 
 ## 📝 License
 
